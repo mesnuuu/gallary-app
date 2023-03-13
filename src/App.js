@@ -4,6 +4,16 @@ import Card from './components/Card';
 import Navbar from './components/Navbar';
 
 function App() {
+
+  const photos = [
+    'https://picsum.photos/id/1001/200/200',
+    'https://picsum.photos/id/1002/200/200',
+    'https://picsum.photos/id/1003/200/200',
+    'https://picsum.photos/id/1004/200/200',
+    'https://picsum.photos/id/1005/200/200',
+    'https://picsum.photos/id/1006/200/200'
+  ]
+
   return (
 
     <>
@@ -16,7 +26,7 @@ function App() {
 
         <div className='row'>
 
-          {Array.apply(null, { length: 9 }).map(() => <Card />)}
+          {photos.map((photo) => <Card  src={photo} />)}
 
         </div>
 
